@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>SuperDuperWebsite</title>
+</head>
+<body>
+    <!--Ссылка на авторизацию-->
+    <a href="#" class="btnLog">Log in</a>
+
+    <!--Блок для вывода форм-->
+    <div class="blform">
+        <h1>Log In</h1>
+        <form action="">
+            <label for="frmLog">Login</label>
+            <input type="text" id="frmlog" required placeholder ="Enter login.." pattern="[^ а-яёА-ЯЁ]+">
+           <br>
+            <label for="pswLog">Password</label>
+            <input type="password" id="frmpass" required placeholder ="Enter password.." pattern="[^ а-яёА-ЯЁ]+">
+            <br>
+            <input type="button" value="Log in" class="frmbut">
+            <input type="reset" value="cancel">
+        </form>
+    </div>
+    <!--Блок для вывода контента-->
+    <div class="Content">
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
