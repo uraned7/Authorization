@@ -1,9 +1,53 @@
-.btnLog{
-
+body{
+    background-color: #e6e6e6;
 }
-.Content{
-
+a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #000;
+    border-radius: 5px;
+    margin: 0px 5px 0 5px;
 }
-.blform{
+
+.blform {
     display: none;
+    align-items: center;
+    background: #bababa;
+    padding: 5px 5px 5px 5px;
+    margin-top: 35px;
+    border-radius: 6px;
 }
+
+.regform{
+    display: none;
+    align-items: center;
+    background: #bababa;
+    padding: 5px 5px 5px 5px;
+    margin-top: 35px;
+    border-radius: 6px;
+}
+
+#AuthorDiv{
+    display: flex;
+    width: 250px;
+    height: 50px;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    background: #bababa;
+    border-radius: 6px;
+    margin: auto;
+}
+
+.frmbut{
+    margin-right: 10px;
+}
+
+.inputDiv{
+    display: flex;
+    justify-content: center;
+}
+.login{
+    padding-right: 23px;
+}
+
