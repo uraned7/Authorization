@@ -48,6 +48,27 @@
     <!-- Блок для вывода контента -->
     <div class="content"></div>
 
+    <div class="slider">
+      <span id="slide-1"></span>
+      <span id="slide-2"></span>
+      <span id="slide-3"></span>
+      <div class="image-container">
+        <img src="Images/1Ad.jpg" class="slide" onclick="sliderItemDescription('ОДЕЖДА','*Тут подробная информация о СКИДКАХ НА ОДЕЖДУ*')"/>
+        <img src="Images/2Ad.jpg" class="slide" onclick="sliderItemDescription('КВАРТИРЫ','*Тут подробная информация о СКИДКАХ НА КВАРТИРЫ*')"/>
+        <img src="Images/3Ad.jpg" class="slide" onclick="sliderItemDescription('КОЛЛЕКЦИИ','*Тут подробная информация о СКИДКАХ НА КОЛЛЕКЦИЮ*')"/>
+      </div>
+      <div class="buttons">
+        <a href="#slide-1"></a>
+        <a href="#slide-2"></a>
+        <a href="#slide-3"></a>
+      </div>
+    </div>
+
+    <div class="slide_description">
+      <h2 id="SlDescTitle">TEST</h2>
+      <p id="SlDescText">*Тут подробная информация о СКИДКАХ*</p>
+    </div>
+
     <script src="script.js?v=1"></script>
   </body>
 </html>

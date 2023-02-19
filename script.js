@@ -3,6 +3,7 @@
 let flag = false;
 let IsLoginActive = false;
 let IsRegistrationActive = false;
+let IsDescActive = false;
 let users = [
     {
         "login" : "admin",
@@ -22,6 +23,8 @@ function formwrap() {
     let content = document.querySelector(".content");
     let btnreg = document.querySelector(".btnreg")
     let blform = document.querySelector(".blform");
+let regform = document.querySelector(".regform")
+
     if(flag){
         blform.style.display = "inline-flex";
         btnlog.textContent = "Log In";
@@ -38,11 +41,17 @@ function formwrap() {
         blform.style.display = "inline-flex";
     }
     IsLoginActive = !IsLoginActive;
+    if(IsRegistrationActive){
+        regform.style.display = "none"
+        IsRegistrationActive = !IsRegistrationActive
+
+    }
 }
 
 function getLogPass() {
     let frmlog = document.querySelector("#frmlog").value;
     let frmpass = document.querySelector("#frmpass").value;
+    
 
     console.log("Login -> "+frmlog);
     console.log("Password -> "+frmpass);
@@ -64,7 +73,7 @@ function checkLogPass(frmlog, frmpass) {
                  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <p>`
             } else if(user.privilege == "admin"){
                 content.innerHTML += `<br></br>
-                <img src="Pufferfish.jpg"></img>`
+                <img src="Images/Pufferfish.jpg"></img>`
             }
 
             let blform = document.querySelector(".blform");
@@ -81,13 +90,19 @@ function checkLogPass(frmlog, frmpass) {
 
 function registrationForm(){
 let regform = document.querySelector(".regform")
+let blform = document.querySelector(".blform");
+
     if(IsRegistrationActive){
         regform.style.display = "none";
     } else{
         regform.style.display = "inline-flex";
     }
-
     IsRegistrationActive = !IsRegistrationActive;
+
+    if(IsLoginActive){
+        blform.style.display = "none"
+        IsLoginActive = !IsLoginActive
+    }
 }
 
 function getRegInfo(){
@@ -129,5 +144,19 @@ function reset_password(){
             content.innerHTML = `Ваш пароль: ${user.password}`;
             return;
         }
+    }
+}
+
+function sliderItemDescription(Title, Description){
+    let slide_description = document.querySelector(".slide_description")
+    let SlDescTitle = document.querySelector("#SlDescTitle");
+    let SlDescText = document.querySelector("#SlDescText");
+
+    SlDescTitle.innerHTML = `${Title}`;
+    SlDescText.innerHTML = `${Description}`;
+
+    if(!IsDescActive){
+        IsDescActive == true;
+        slide_description.style.display = "block"
     }
 }
